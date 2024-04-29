@@ -16,6 +16,7 @@ public class EmailJaExixtentePage {
     }
 
     public void mensagemDeErro(String mensagem) {
+
         driver.findElement(By.xpath("//p[contains(.,'Email Address already exist!')]")).getText().contains("Email Address already exist!");
 
         WebElement mensagemErro = driver.findElement(By.xpath("//p[contains(.,'Email Address already exist!')]"));
@@ -33,6 +34,7 @@ public class EmailJaExixtentePage {
             e.printStackTrace();
         }
     }
+
 
 
 }

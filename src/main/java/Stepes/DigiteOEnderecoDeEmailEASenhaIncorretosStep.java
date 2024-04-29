@@ -37,6 +37,8 @@ public class DigiteOEnderecoDeEmailEASenhaIncorretosStep {
     }
 
 
-
-
+    @Then("valido mensagem de erro email e senha")
+    public void validoMensagemDeErroEmailESenha() {
+        digiteOEnderecoDeEmailEASenhaIncorretosPage.validarMessagemErroSenhaEemail();
+    }
 }

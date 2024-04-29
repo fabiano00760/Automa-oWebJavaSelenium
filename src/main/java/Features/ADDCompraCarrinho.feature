@@ -1,5 +1,4 @@
 @CompraCarrinho
-
 Feature:Adcionar compra no Carrinho de Campra
 
   Scenario Outline: Adcionar compra no Carrinho de Campra

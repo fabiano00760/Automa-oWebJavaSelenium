@@ -18,7 +18,6 @@ public class ADDCompraCarinhoPage {
     }
 
     public void AddCompraCarrinho() throws InterruptedException {
-
         // Inicializando o objeto JavascriptExecutor
         JavascriptExecutor js = (JavascriptExecutor) driver;
 
@@ -37,10 +36,7 @@ public class ADDCompraCarinhoPage {
         Thread.sleep(200); // Aguarde 2 segundos (pode ser ajustado conforme necessário)
 
         // Encontre o botão "Add to Cart"
-        WebElement addToCartButton = driver.findElement(By.xpath("(//a[@class='btn btn-default add-to-cart'])[2]"));
-
-        // Clique no botão "Add to Cart"
-        addToCartButton.click();
+       driver.findElement(By.xpath("(//a[contains(.,'Add to cart')])[2]")).click();
 
         // Aguarde um tempo para o carrinho ser atualizado (você pode melhorar isso com uma espera explícita)
         Thread.sleep(1500); // Aguarde 15 segundos (pode ser ajustado conforme necessário)

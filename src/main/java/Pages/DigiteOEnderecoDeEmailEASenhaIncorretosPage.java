@@ -6,16 +6,19 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import java.time.Duration;
+
 public class DigiteOEnderecoDeEmailEASenhaIncorretosPage {
     WebElement webElement;
     WebDriver driver;
+
 
     public DigiteOEnderecoDeEmailEASenhaIncorretosPage() {
         this.driver = FDriver.getDrive();
     }
 
 
-    public void validarTelaLogin(){
+    public void validarTelaLogin() {
         driver.findElement(By.xpath("//a[contains(.,'Delete Account')]")).getText().contains("Delete Account");
     }
 
@@ -32,6 +35,23 @@ public class DigiteOEnderecoDeEmailEASenhaIncorretosPage {
     }
 
     public void validarMessagemErrro() {
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
+
+        boolean mensageErro = driver.findElement(By.xpath("//p[contains(.,'Email Address already exist!')]")).getText().contains("Email Address already exist!");
+
+        Assert.assertTrue(mensageErro);
+
+        // Verificar se a mensagem está presente na página
+        try {
+            WebElement mensagemElement = driver.findElement(By.xpath("Email Address already exist!"));
+            mensagemElement.isDisplayed();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void validarMessagemErroSenhaEemail() {
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 
         boolean mensageErro = driver.findElement(By.xpath("//p[contains(.,'Your email or password is incorrect!')]")).getText().contains("Your email or password is incorrect!");
 
@@ -39,10 +59,11 @@ public class DigiteOEnderecoDeEmailEASenhaIncorretosPage {
 
         // Verificar se a mensagem está presente na página
         try {
-            WebElement mensagemElement = driver.findElement(By.xpath("//p[contains(.,'Your email or password is incorrect!')]"));
+            WebElement mensagemElement = driver.findElement(By.xpath("Your email or password is incorrect!"));
             mensagemElement.isDisplayed();
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
 }
+

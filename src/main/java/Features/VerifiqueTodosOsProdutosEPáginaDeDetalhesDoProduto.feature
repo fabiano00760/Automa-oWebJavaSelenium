@@ -1,5 +1,4 @@
 @pageProduto
-
 Feature: Page Produtos
 
   Scenario:Verifique Todos Os Produtos E Página De Detalhes Do Produto

@@ -1,8 +1,10 @@
 package Pages;
 import F.Driver.FDriver;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 import java.time.Duration;
@@ -91,7 +93,11 @@ public class InformacaoContaPage {
     }
 
     public void cidade(String cidade) throws InterruptedException {
-        driver.findElement(By.xpath("//input[@name='city']")).sendKeys(cidade);
+        // Realizando a rolagem da página para baixo com o botão do mouse
+        Actions actions = new Actions(driver);
+        WebElement cidade1 = driver.findElement(By.xpath("//input[@name='city']"));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", cidade1);
+        cidade1.sendKeys(cidade);
         Thread.sleep(2000);
     }
 

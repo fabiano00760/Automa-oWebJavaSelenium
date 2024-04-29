@@ -12,7 +12,7 @@ import io.cucumber.junit.CucumberOptions;
 
         features = "src/main/java/Features/LoginNovoUsuario.feature",
         glue = {"Stepes","F.Driver"},
-        tags = "@web ",
+        tags = " @CompraCarrinho" ,
         monochrome = true,
         publish = true,
         plugin = {"pretty", "json:target/report.json", "junit:target/report.xml", "html:target/cucumber-reports.html" },

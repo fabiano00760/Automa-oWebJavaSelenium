@@ -4,14 +4,14 @@ Feature: Login Novo Usuario
   Scenario: Novo conta
     Given que eu esteja na pagina home "https://www.automationexercise.com/login"
     When no capo login preencho o campo de Cadastro de novo usuário! o nome "Fabiano"
-    And preencho o campo endereço de email novo cadastro "fabiano00760@live.com"
+    And preencho o campo endereço de email novo cadastro "fabiano00760@outlook.com"
     And clico no btn inscrever-se
     Then logo com sucesso
 
   Scenario:informaçao de Conta
     Given que eu esteja na pagina home "https://www.automationexercise.com/login"
     When no capo login preencho o campo de Cadastro de novo usuário! o nome "Fabiano"
-    And preencho o campo endereço de email new user singnup "fabiano00760@live.com"
+    And preencho o campo endereço de email new user singnup "fabiano00760@outlook.com"
     And clico no btn inscrever-se
     Then logo com sucesso
     When no capo login preencho o campo de senha  de novo usuario "Edu00760"

@@ -1,4 +1,4 @@
-# Automa-oWebJavaSelenium
+# Automa-WebJavaSelenium
 AutomaçãoWebJavaSelenium
 Introdução:
 Bem-vindos à nossa apresentação sobre automação de testes web utilizando Selenium, Java, Cucumber e JUnit. Nesta sessão, vamos demonstrar como essas tecnologias podem ser combinadas para automatizar testes em um site real, o Automation Exercise.

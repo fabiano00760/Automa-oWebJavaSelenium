@@ -5,7 +5,7 @@ Feature: Login Novo Usuario
   Scenario: Novo conta
     Given que eu esteja na pagina home "https://www.automationexercise.com/login"
     When no capo login preencho o campo de Cadastro de novo usuário! o nome "Fabiano"
-    And preencho o campo endereço de email novo cadastro "fabiano00760@live.com"
+    And preencho o campo endereço de email novo cadastro "fabiano00760@outlook.com"
     And clico no btn inscrever-se
     Then logo com sucesso
 
@@ -13,10 +13,10 @@ Feature: Login Novo Usuario
   Scenario:informaçao de Conta
     Given que eu esteja na pagina home "https://www.automationexercise.com/login"
     When no capo login preencho o campo de Cadastro de novo usuário! o nome "Fabiano"
-    And preencho o campo endereço de email new user singnup "fabiano00760@live.com"
+    And preencho o campo endereço de email new user singnup "fabiano00760@outlook.com"
     And clico no btn inscrever-se
     Then logo com sucesso
-    When no capo login preencho o campo de senha  de novo usuario "Edu00760"
+    When no capo login preencho o campo de senha  de novo usuario "Edu00760@"
     And preencho o campo endereço de data de nascimento
     And preencho o campo Primeiro nome "junio"
     And preencho o campo Sobrenome  "costa"
@@ -34,8 +34,8 @@ Feature: Login Novo Usuario
   @logComSucesso
   Scenario: Login com Sucesso
     Given que eu esteja na pagina home "https://www.automationexercise.com/login"
-    When preencho o campo endereço de email "fabiano00760@yahoo.com"
-    And  preencho o campo Password "edu00760"
+    When preencho o campo endereço de email "fabiano00760@live.com"
+    And  preencho o campo Password "Edu00760"
     And  clico no btn Login Conta
     Then loguin Realizado com sucesso
 
@@ -43,7 +43,7 @@ Feature: Login Novo Usuario
   Scenario: Digite o endereço de e-mail e a senha incorretos
 
     Given que eu esteja na pagina home "https://www.automationexercise.com/login"
-    When preencho o campo endereço de email incorreto "fabiano00760@yahoo.com"
+    When preencho o campo endereço de email incorreto "fabiano00760@live.com"
     And  preencho o campo Password incorreto "Edu00760"
     And  clico no btn Login Conta
     Then valido mensagem de erro email e senha
@@ -51,8 +51,8 @@ Feature: Login Novo Usuario
   @LogoutUsuario
   Scenario: Logout Usuario
     Given que eu esteja na pagina home "https://www.automationexercise.com/login"
-    And preencho o campo endereço de email "fabiano00760@yahoo.com"
-    And  preencho o campo Password "edu00760"
+    And preencho o campo endereço de email "fabiano00760@live.com"
+    And  preencho o campo Password "Edu00760"
     And  clico no btn Login Conta
     When loguin Realizado com sucesso
     And clico no btn logout do usuario
@@ -62,7 +62,7 @@ Feature: Login Novo Usuario
   Scenario: Emeail ja existente
     Given que eu esteja na pagina home "https://www.automationexercise.com/login"
     When no capo login preencho o campo de Cadastro de novo usuário! o nome "Fabiano"
-    And preencho o campo endereço de email new user singnup "fabiano00760@yahoo.com"
+    And preencho o campo endereço de email new user singnup "fabiano00760@live.com"
     And clico no btn inscrever-se
     Then valido mensagem de erro
 
@@ -78,14 +78,14 @@ Feature: Login Novo Usuario
     When Verifique se o usuário foi navegado para a página de casos de teste com sucesso
     Examples:
       | url                                        | email                    | senha      |
-      | "https://www.automationexercise.com/login" | "fabiano00760@yahoo.com" | "edu00760" |
+      | "https://www.automationexercise.com/login" | "fabiano00760@live.com" | "Edu00760" |
 
   @VerificarProdutosEPageDeDetalheDoProd
   Scenario:Verifique Todos Os Produtos E Página De Detalhes Do Produto
 
     Given que eu esteja na pagina home "https://www.automationexercise.com/login"
-    And preencho o campo endereço de email "fabiano00760@yahoo.com"
-    And  preencho o campo Password "edu00760"
+    And preencho o campo endereço de email "fabiano00760@live.com"
+    And  preencho o campo Password "Edu00760"
     And  clico no btn Login Conta
     And Verifique se a pagina produtos inicial esta visivel com sucesso
     And Clique no botao Produtos
@@ -100,7 +100,7 @@ Feature: Login Novo Usuario
     Given que eu esteja na pagina home "https://www.automationexercise.com"
     And Clico no BTN Contact us
     Then preencho o campo Nome "Fabiano"
-    And o campo Email "fabiano00760@yahoo.com"
+    And o campo Email "fabiano00760@live.com"
     And eo objetivo Da mensagem "fala sobre os documentos a serem enviados"
     And Escrevo a mensagem no campo "agradeço pelo analise"
     And clico no BTN Escoler arquivo e seleciono o arquivo
@@ -120,4 +120,4 @@ Feature: Login Novo Usuario
 
     Examples:
       | url                                        | email                    | Password   |
-      | "https://www.automationexercise.com/login" | "fabiano00760@yahoo.com" | "edu00760" |
+      | "https://www.automationexercise.com/login" | "fabiano00760@live.com" | "Edu00760" |
